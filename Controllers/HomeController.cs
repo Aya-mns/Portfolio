@@ -13,7 +13,7 @@ namespace Portfolio.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Portfolio()
         {
             return View();
         }

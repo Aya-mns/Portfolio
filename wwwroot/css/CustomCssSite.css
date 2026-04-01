@@ -205,7 +205,7 @@ hr {
     text-decoration: none;
     font-family: 'Ink Free';
     font-size: 20px;
-    transition: 0.4s all;
+    transition: 0.4s all ease-in-out;
     box-shadow: 0px 1px 10px gray;
     
 }
@@ -280,4 +280,109 @@ hr {
         opacity: 0.6;
     }
 }
+
+
+.AboutCard {
+    margin-top: 8rem;
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    gap: 40px;
+    border: 1px solid #ff7a00;
+    border-radius: 25px;
+    backdrop-filter: blur(3px);
+    padding: 2rem;
+}
+
+.Certs .AboutMe{
+    flex:1;
+}
+
+.AboutMe {
+    text-align:center;
+    padding:20px;
+    border-right: 2px solid #ff7a00;
+}
+
+.AboutMe p{
+    padding-top:30px;
+    font-size:22px;
+    color:white;
+    font-weight:lighter;
+    margin-bottom:2rem;
+}
+
+    .AboutMe p i {
+        color: rgba(50, 251, 226, 0.8);
+        font-size:22px;
+    }
+
+    .AboutMe h2 {
+        font-family:'Ink Free';
+        font-size:50px;
+    }
+
+.Certs {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.Certs h2 {
+    font-family: 'Ink Free';
+    font-size: 50px;
+    margin-bottom:40px;
+}
+
+.certificate-card {
+    border: 1px solid #9f9898;
+    background: rgba(255,255,255,0.10);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 122, 0, 0.40);
+    backdrop-filter: blur(10px);
+}
+
+
+    .certificate-card:hover {
+        transform: scale(1.06);
+        box-shadow: 0 5px 15px rgba(255, 122, 0, 0.80);
+        background: rgba(255,255,255,0.15);
+    }
+
+    .Certs div{
+        color:white;
+    }
+
+.certificate-card h5 {
+    color: rgba(50, 251, 226, 0.8);
+    text-shadow:none;
+    font-family:michroma;
+}
+
+
+.ViewProjectsBtn {
+    display:inline-block;
+    text-align: center;
+    border: 2px #ff7a00 solid;
+    padding: 12px;
+    width: 12rem;
+    color: white;
+    border-radius: 25px;
+    background: linear-gradient( 135deg, rgba(255, 122, 0, 0.7), rgba(75, 0, 130, 0.55), rgba(0, 0, 139, 0.8) );
+    font-family: 'Ink Free';
+    font-size: 25px;
+    transition: 0.4s all ease-in-out;
+    box-shadow: 0px 1px 10px gray;
+    text-decoration:none;
+}
+
+    .ViewProjectsBtn:hover {
+        background: linear-gradient( 135deg, rgba(255, 122, 0, 0.9), rgba(75, 0, 130, 0.85), rgba(0, 0, 139, 0.9) );
+        transform: scale(1.09);
+        cursor: pointer;
+        box-shadow: 1px 2px 10px gray;
+    }
+
 
