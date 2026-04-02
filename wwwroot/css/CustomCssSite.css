@@ -385,4 +385,63 @@ hr {
         box-shadow: 1px 2px 10px gray;
     }
 
+#tech{
+    text-align:center;
+    margin-top:12rem;
+    font-family:michroma;
+    font-size:55px;
+}
 
+.skillsCards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap:nowrap;
+    margin-top: 5rem;
+}
+
+.MiniCard {
+    background: rgba(255,255,255,0.08);
+    border: 2px solid rgba(50, 251, 226, 0.8);
+    border-radius: 25px;
+    padding: 25px;
+    backdrop-filter: blur(4px);
+    text-align: center;
+    width: 320px;
+    transition: 0.3s all ease-out;
+    animation: fadeUp 1s ease forwards;
+    box-shadow: 0 2px 10px rgba(50, 251, 226, 0.5);
+}
+
+    .MiniCard:hover {
+        box-shadow: 0 5px 15px rgba(50, 251, 226, 0.8);
+    }
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.MiniCard h3 {
+    color: #ff7a00;
+    font-family: 'Ink Free';
+    margin-bottom: 15px;
+}
+
+.MiniCard ul{
+    list-style:none;
+    color:white;
+    
+}
+
+.MiniCard li {
+    margin-left:-25px;
+    margin-top:4px;
+}
