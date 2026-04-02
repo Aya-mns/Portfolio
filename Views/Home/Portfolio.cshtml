@@ -411,16 +411,67 @@
       
       </div>
     </section>
-   
-
-    <section id="Projects">
-       
-    </section>
       
+        <section id="Projects">
+            <h1 id="Projs">&#128187Projects</h1>
+            <div class="ProjectCard">
 
+                <div class="project-images">
+                    <img src="~/image sources/provision home1.png" class="slide active" />
+
+                    <div class="project-info-below">
+                        <div class="tech-stack">
+                            <span>ASP.NET Core MVC</span>
+                            <span>Entity Framework</span>
+                            <span>SQL Server</span>
+                        </div>
+
+                        <a href="https://github.com/Aya-mns/ProVision_Freelance_Platform.git" target="_blank" class="project-btn">
+                            <i class="fa-brands fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="Content">
+                    <h2>🚀 ProVision Freelance Platform</h2>
+                    <p>
+                        ProVision is a full-stack service marketplace platform built with ASP.NET Core MVC, designed to efficiently connect clients with qualified service providers through an automated and user-friendly workflow. <br /><br />
+                        A standout feature is the “First-Wins” system, which analyzes each order’s requirements and matches it with all suitable providers. The first provider to accept is immediately assigned, ensuring fast responses and efficient task distribution. <br /><br />
+                        Service providers undergo a structured onboarding process, completing a task related to their specialization that is evaluated by the admin, guaranteeing that only qualified professionals join the platform. <br /><br />
+                        ProVision also offers three service templates for clear request submission and an Explore page for browsing services and discovering providers. <br /><br />
+                        By combining smart automation, quality control, and intuitive features, ProVision delivers a reliable and efficient service marketplace experience.
+                    </p>
+                </div>
+
+            </div>
+        </section>
     
    
+        <script>
+                const images = [
+                    "/image sources/provision home1.png",
+                    "/image sources/provision categories.png",
+                    "/image sources/provision templates.png",
+                    "/image sources/provision explore.png"
+                  
+                ];
 
+                let index = 0;
+
+                const leftImg = document.querySelector(".slide.left");
+                const centerImg = document.querySelector(".slide.active");
+                const rightImg = document.querySelector(".slide.right");
+
+                function updateSlider() {
+                    index = (index + 1) % images.length;
+
+                    centerImg.src = images[index];
+                    leftImg.src = images[(index - 1 + images.length) % images.length];
+                    rightImg.src = images[(index + 1) % images.length];
+                }
+
+                setInterval(updateSlider, 3000);
+        </script>
 
     <script>
             const words = [
