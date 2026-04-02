@@ -30,16 +30,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav ">
                         <li class="nav-item">
-                            <a class="nav-link active text-light" @* asp-controller="Home" asp-action="Index" *@ href="#"><i class="fa-solid fa-house"></i> Home</a>
+                            <a class="nav-link active text-light" asp-controller="Home" asp-action="Portfolio" asp-fragment="Home"><i class="fa-solid fa-house"></i> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" @* asp-controller="Home" asp-action="Privacy" *@ href="#"><i class="fa-solid fa-circle-info"></i> About</a>
+                            <a class="nav-link text-light" asp-controller="Home" asp-action="Portfolio" asp-fragment="About"><i class="fa-solid fa-circle-info"></i> About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#"><i class="fa-solid fa-code-branch"></i> Skills</a>
+                            <a class="nav-link text-light" asp-controller="Home" asp-action="Portfolio" asp-fragment="Skills"><i class="fa-solid fa-code-branch"></i> Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light"  href="#"><i class="fa-solid fa-laptop"></i> Projects</a>
+                            <a class="nav-link text-light" asp-controller="Home" asp-action="Portfolio" asp-fragment="Projects"><i class="fa-solid fa-laptop"></i> Projects</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" href="#Contact"><i class="fa-solid fa-address-book"></i> Contact</a>
@@ -59,8 +59,16 @@
     <footer class="border-top footer text-muted" style="margin-top:50px; margin-bottom:40px;">
         <hr />
         <section id="Contact">
-        <div class="container">
-            &copy; 2026 - Portfolio - <a asp-area="" asp-controller="Home" asp-action="Privacy">Aya Salem</a>
+            <div class="container d-flex justify-content-between align-items-center">
+            <div id="left-side">
+                    <span style="color:white;">&copy; 2026 - Portfolio - Aya Salem </span>| All Rights Reserved
+                </div>
+                <div id="right-side">
+                    <a href="https://mail.google.com/mail/" target="_blank">ayasalem.it@gmail.com</a>
+                    <span>+962 7 9596 9481</span>
+                    <a href="https://github.com/Aya-mns" target="_blank"><i class="devicon-github-original"></i></a>
+                    <a href="https://www.linkedin.com/in/aya-salem-521956367/" target="_blank"><i class="devicon-linkedin-plain"></i></a>
+                </div>
         </div>
         </section>
     </footer>

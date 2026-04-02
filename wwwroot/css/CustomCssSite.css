@@ -668,3 +668,23 @@ hr {
     background: rgba(255,255,255,0.3);
     font-size: 15px;
 }
+
+
+.container{
+    padding:5px;
+}
+
+#right-side {
+    display: flex;
+    gap: 15px;
+}
+#right-side span, a {
+color:white;
+text-decoration:none;
+transition:0.1s all ease;
+font-size:18px;
+}
+    #right-side span:hover, a:hover {
+        color: rgba(50, 251, 226, 0.8);
+        transform:scale(1.05);
+    }
