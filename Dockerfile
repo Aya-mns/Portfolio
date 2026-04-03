@@ -1,18 +1,19 @@
-# Stage 1: Build
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+# Use official ASP.NET 8 runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
-
-COPY . ./
-
-RUN dotnet restore
-RUN dotnet publish -c Release -o out
-
-# Stage 2: Run
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
-WORKDIR /app
-COPY --from=build /app/out ./
-
-ENV ASPNETCORE_URLS=http://0.0.0.0:80
-
 EXPOSE 80
+
+# Build stage
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["Portfolio.csproj", "./"]
+RUN dotnet restore "./Portfolio.csproj"
+COPY . .
+WORKDIR "/src/."
+RUN dotnet publish "Portfolio.csproj" -c Release -o /app/publish
+
+# Final stage
+FROM base AS final
+WORKDIR /app
+COPY --from=build /app/publish .
 ENTRYPOINT ["dotnet", "Portfolio.dll"]
